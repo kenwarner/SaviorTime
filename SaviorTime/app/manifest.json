@@ -1,15 +1,32 @@
 {
   "manifest_version": 2,
 
-  "name": "One-click Kittens",
-  "description": "This extension demonstrates a browser action with kittens.",
+  "name": "SaviorTime",
+  "description": "This extension provides additional assistance to RescueTime.",
   "version": "1.0",
 
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
   "permissions": [
-    "https://secure.flickr.com/"
+	"alarms",
+    "*://*.rescuetime.com/",
+	"http://www.google-analytics.com/ga.js"
   ],
   "browser_action": {
-    "default_icon": "img/icon.png",
-    "default_popup": "popup.html"
+    "default_title": "Savior Time",
+	"default_icon": "browser/icon.png",
+    "default_popup": "browser/browser.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://www.google.com/*"],
+      "css": ["content/content.css"],
+      "js": ["lib/jquery-2.0.3/jquery-2.0.3.min.js", "content/content.js"]
+    }
+  ],
+  "background": {
+	"scripts": ["background/background.js"],
+	"persistent": false
   }
+
 }
