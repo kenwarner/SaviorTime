@@ -30,7 +30,7 @@ var browser = {
 		this.context.font = 'bold 10pt Courier New';
 		this.context.fillStyle = '#e9e9e9';
 
-    var textWidth = this.context.measureText(text).width;
+		var textWidth = this.context.measureText(text).width;
 		this.context.fillText(text, (this.canvas.width / 2) - (textWidth / 2), 14);
 
 		var imageData = this.context.getImageData(0, 0, this.canvas.width, this.canvas.height);
