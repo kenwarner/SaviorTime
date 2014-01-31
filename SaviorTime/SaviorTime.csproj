@@ -39,16 +39,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="app\background\background.js" />
-    <Content Include="app\browser\browser.css">
-      <DependentUpon>browser.less</DependentUpon>
-    </Content>
     <Content Include="app\content\content.js" />
     <Content Include="app\content\content.css">
       <DependentUpon>content.less</DependentUpon>
     </Content>
     <Content Include="app\browser\icon.png" />
     <Content Include="app\lib\jquery-2.0.3\jquery-2.0.3.min.js" />
-    <Content Include="app\browser\browser.html" />
     <Content Include="app\browser\browser.js" />
     <Content Include="Properties\build\lib\Ionic.Zip.DLL" />
     <Content Include="Properties\build\lib\MSBuild.ExtensionPack.dll" />
@@ -58,7 +54,6 @@
     <Content Include="Properties\build\ligershark.chrome.targets" />
     <Content Include="screenshots\readme.txt" />
     <Content Include="app\content\content.less" />
-    <Content Include="app\browser\browser.less" />
     <None Include="scripts\_references.js" />
     <None Include="scripts\chrome-api-vsdoc.js" />
   </ItemGroup>
